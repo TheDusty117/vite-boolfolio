@@ -18,6 +18,8 @@ export default{
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+@use './style/general.scss' as *;
+
 
 </style>
