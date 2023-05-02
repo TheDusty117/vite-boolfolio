@@ -1,5 +1,7 @@
 <script >
 import Projects from './components/Projects.vue'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default{
   components:{

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <p v-for="project in projects" :key="project.id">{{ project.title }}</p>
+    <h3 class="bg-danger" v-for="project in projects" :key="project.id">{{ project.title }}</h3>
 
   </div>
 </template>
