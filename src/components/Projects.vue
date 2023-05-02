@@ -22,6 +22,8 @@ import axios from 'axios';
         axios.get('http://127.0.0.1:8000/api/projects') //chiamata axios alla route api
         .then(res =>{
           console.log(res)      //se va ci da console log res
+          const { results } = res.data //prendo i dati che ottengo con chiamata axios
+          this.projects = results     // e poi gli assegno a array vuoto projects grazie a this,
         })
         .catch(err =>{
           console.log(err)      //se errore ci da console log error
