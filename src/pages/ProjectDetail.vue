@@ -18,6 +18,14 @@ import axios from 'axios';
       fetchProject(){
         axios.get(`http://127.0.0.1:8000/api/projects/${ this.slug }`)
         .then(res => {
+          //redirecting se non trova il project
+          const { success, project } = res.data // success e proj sono true
+
+          if(success) {
+            this.project = project
+          } else {
+            this.$router.replace({ name: '404' })
+          }
 
         })
         .catch(err =>{
