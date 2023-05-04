@@ -38,6 +38,7 @@ const router = createRouter({
       path:'/portfolio/:slug',
       name:'projectdetail',
       component: ProjectDetail,
+      props: true,
     },
   ],
 

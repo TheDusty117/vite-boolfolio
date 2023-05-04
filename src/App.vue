@@ -15,7 +15,7 @@ export default{
 
 <template>
   <header>
-    <div class="container-header">
+    <div class="container container-header">
       <h2>Boolfolio</h2>  
       <NavBar></NavBar>
     </div>
@@ -24,7 +24,7 @@ export default{
 
 
   <main>
-    <div class="container-main">
+    <div class="container container-main">
 
     </div>
     <router-view></router-view>
@@ -33,7 +33,7 @@ export default{
 
 
   <footer>
-    <div class="container-footer">
+    <div class="container container-footer">
       <h2>
         questo e' un footer
       </h2>
