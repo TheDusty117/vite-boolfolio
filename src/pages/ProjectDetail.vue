@@ -5,6 +5,17 @@
       <h1>
         {{ project.title }}
       </h1>
+      <h2>
+        {{ project.client }}
+      </h2>
+
+      <p v-if="project.category">
+        {{ project.category.name }}
+      </p>
+
+      <ul>
+        <li v-for="technology in project.technologies" :key="technology.slug">{{ technology.name }}</li>
+      </ul>
     
     </div>
 

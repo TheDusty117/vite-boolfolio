@@ -1,7 +1,7 @@
 <template>
   <div class="card m-4">
     <!-- rotta che registreremo per mostrare quando clicchiamo un project -->
-    <router-link :to="`/portfolio/${project.slug}`"> 
+    <router-link :to="{ name: 'projectdetail', params: {slug: project.slug} }"> 
 
       <h3>{{ project.title }}</h3>
       <h4>{{ project.client }}</h4>
