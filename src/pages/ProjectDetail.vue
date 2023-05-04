@@ -1,15 +1,31 @@
 <template>
-  <div class="container">
-    <h1>
-      {{ $route.params.slug }} == {{ slug }}
-    </h1>
-  </div>
+  <template v-if="project">
+
+    <div class="container">
+      <h1>
+        {{ project.title }}
+      </h1>
+    
+    </div>
+
+    <div class="container">
+      <div v-html="project.description"></div>
+    </div>
+
+  </template>
 </template>
 
 <script>
 import axios from 'axios';
 
   export default {
+
+
+    data(){
+      return{
+        project: null
+      }
+    },
     
     //accedere dei parametri delle rotte
     props: ['slug'],
@@ -30,6 +46,8 @@ import axios from 'axios';
         })
         .catch(err =>{
           console.log(err)
+          // this.$router.replace({ name: '404' })
+
         })
       }
     },
