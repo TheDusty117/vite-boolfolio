@@ -4,6 +4,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './pages/Home.vue'
 import Portfolio from './pages/Portfolio.vue'
 import ChiSono from './pages/ChiSono.vue'
+import PageNotFound from './pages/PageNotFound.vue'
+import ProjectDetail from './pages/ProjectDetail.vue'
+
+
 
 
 const router = createRouter({
@@ -24,7 +28,17 @@ const router = createRouter({
       path:'/chi-sono',
       name: 'chisono',
       component: ChiSono
-    }
+    },
+    {
+      path:'/404',
+      name:'404',
+      component: PageNotFound,
+    },
+    {
+      path:'/portfolio/:slug',
+      name:'projectdetail',
+      component: ProjectDetail,
+    },
   ],
 
 })
